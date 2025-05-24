@@ -1,3 +1,4 @@
+// Terapkan plugin Android dan plugin Flutter klasik
 apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
@@ -6,11 +7,12 @@ android {
     compileSdkVersion 34
 
     defaultConfig {
-        applicationId "com.cryvault.wallet"
+        applicationId "com.cryvault.wallet" // Ganti sesuai kebutuhanmu
         minSdkVersion 21
         targetSdkVersion 34
         versionCode 1
         versionName "1.0"
+
         multiDexEnabled true
     }
 
@@ -21,8 +23,14 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    // Konfigurasi lint optional
+    lintOptions {
+        disable 'InvalidPackage'
+    }
 }
 
 dependencies {
+    // Dependensi dasar Flutter dan AndroidX
     implementation 'androidx.multidex:multidex:2.0.1'
 }
