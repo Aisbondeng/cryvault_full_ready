@@ -1,8 +1,7 @@
-name: Cryvault
-description: A new Flutter project.
+name: cryvault_app
+description: A crypto wallet built with Flutter.
 
-publish_to: 'none' 
-
+publish_to: 'none' # Remove this if you want to publish to pub.dev
 version: 1.0.0+1
 
 environment:
@@ -16,14 +15,21 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   intl: ^0.20.2
-  provider: ^6.0.5
+  provider: ^6.1.1
   shared_preferences: ^2.2.2
-  qr_flutter: ^4.0.0
+  qr_flutter: ^4.1.0
   bip39: ^1.0.6
-  bitcoin_flutter: ^2.0.0
+
+  # Pakai fork bitcoin_flutter yang sudah null safety
+  bitcoin_flutter:
+    git:
+      url: https://github.com/defichain-bitcoin/bitcoin_flutter.git
+      ref: null-safety
+
   firebase_core: ^2.24.2
   firebase_auth: ^4.16.0
   cloud_firestore: ^4.13.0
+  http: ^0.13.6
 
 dev_dependencies:
   flutter_test:
