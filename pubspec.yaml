@@ -1,5 +1,6 @@
 name: cryvault_app
-description: A crypto wallet built with Flutter. # HANYA satu baris ini
+description: A crypto wallet built with Flutter.
+
 publish_to: 'none'
 version: 1.0.0+1
 
@@ -19,29 +20,22 @@ dependencies:
   qr_flutter: ^4.1.0
   bip39: ^1.0.6
 
-  # Versi stabil dan valid
-  name: bitcoin_flutter
-description: A dart Bitcoin library for Flutter. BIP32, BIP39, P2PKH integration.
-version: 2.0.2
-homepage: https://github.com/anicdh
+  # Fork aktif & null-safe
+  bitcoin_flutter:
+    git:
+      url: https://github.com/dart-bitcoin/bitcoin_flutter.git
 
-environment:
-  sdk: ">=2.3.0 <3.0.0"
-
-dependencies:
-  bip39: ^1.0.6
-  bip32: ^2.0.0
-  pointycastle: ^3.6.0
-  hex: ^0.2.0
-  bs58check: ^1.0.2
-  bech32: 0.2.1
+  firebase_core: ^2.24.2
+  firebase_auth: ^4.16.0
+  cloud_firestore: ^4.13.0
+  http: ^0.13.6
 
 dev_dependencies:
-  test: ^1.21.1
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.1
 
-dependency_overrides:
-  analyzer: 4.1.0
-  convert: ^3.0.0
-  crypto: ^3.0.0
-  hex: ^0.2.0
-
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
