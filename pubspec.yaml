@@ -1,6 +1,5 @@
 name: cryvault_app
-description: A crypto wallet built with Flutter.
-
+description: A crypto wallet built with Flutter. # HANYA satu baris ini
 publish_to: 'none'
 version: 1.0.0+1
 
