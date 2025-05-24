@@ -20,11 +20,11 @@ dependencies:
   qr_flutter: ^4.1.0
   bip39: ^1.0.6
 
-  # Gunakan fork aktif yang mendukung null-safety
+  # Versi stabil dan valid
   bitcoin_flutter:
     git:
       url: https://github.com/dart-bitcoin/bitcoin_flutter.git
-      ref: nullsafety
+      ref: main
 
   firebase_core: ^2.24.2
   firebase_auth: ^4.16.0
